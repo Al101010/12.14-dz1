@@ -1,6 +1,16 @@
-// TODO: write your code here
-import sum from './basic';
+import Character from './Character';
+import Team from './Team';
 
-console.log('worked');
+const bowmanOleg = new Character('Oleg', 'Bowman');
+const magicianOlga = new Character('Olga', 'Magician');
+const bowmanIvan = new Character('Ivan', 'Bowman');
 
-console.log(sum([1, 2]));
+const team = new Team();
+
+team.add(bowmanOleg);
+team.add(magicianOlga);
+team.add(bowmanIvan);
+
+for (let character of team) {
+    console.log(character)
+}
